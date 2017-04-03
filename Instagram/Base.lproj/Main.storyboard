@@ -309,12 +309,65 @@
                     <view key="view" contentMode="scaleToFill" id="Ohd-hf-Nfs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VZt-Ag-xy6">
+                                <rect key="frame" x="16" y="20" width="343" height="622"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VZt-Ag-xy6" firstAttribute="top" secondItem="bMe-h6-BCb" secondAttribute="bottom" id="2b4-B4-B8V"/>
+                            <constraint firstItem="VZt-Ag-xy6" firstAttribute="leading" secondItem="Ohd-hf-Nfs" secondAttribute="leadingMargin" id="Dod-h3-elS"/>
+                            <constraint firstItem="u1m-yr-n7x" firstAttribute="top" secondItem="VZt-Ag-xy6" secondAttribute="bottom" constant="25" id="P43-Fy-D2S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VZt-Ag-xy6" secondAttribute="trailing" id="m1e-P5-R7m"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="VZt-Ag-xy6" id="f7x-Td-wPM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEs-sC-4eS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1422" y="32"/>
+            <point key="canvasLocation" x="1377" y="25"/>
+        </scene>
+        <!--Comennto View Controller-->
+        <scene sceneID="UTG-Z5-xU8">
+            <objects>
+                <viewController storyboardIdentifier="commentView" id="Umd-6H-stm" customClass="comenntoViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hqI-kd-wUB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Inm-qA-Xtd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VxJ-e5-AGM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JxY-td-YLg">
+                                <rect key="frame" x="16" y="28" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKX-65-LzH">
+                                <rect key="frame" x="141" y="104" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="コメントする"/>
+                                <connections>
+                                    <action selector="comenntoButton:" destination="Umd-6H-stm" eventType="touchUpInside" id="XQB-M3-vZM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="comennto" destination="JxY-td-YLg" id="D2C-JE-iKL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ri6-eD-f6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2031" y="25"/>
         </scene>
     </scenes>
     <resources>

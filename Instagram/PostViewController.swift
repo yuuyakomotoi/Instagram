@@ -21,7 +21,7 @@ class PostViewController: UIViewController {
     
     @IBAction func handlePostButton(_ sender: Any) {
     
-        let imageData = UIImageJPEGRepresentation(imageView.image,0.5)
+        let imageData = UIImageJPEGRepresentation(imageView.image!,0.5)
         let imageString = imageData!.base64EncodedString(options: .lineLength64Characters)
     
     let time = NSDate.timeIntervalSinceReferenceDate
@@ -29,9 +29,10 @@ class PostViewController: UIViewController {
     
         
         let postRef = FIRDatabase.database().reference().child(Const.PostPath)
+        
         let postData = ["caption": textField.text!, "image": imageString, "time": String(time), "name": name!]
         postRef.childByAutoId().setValue(postData)
-        
+        //新規作成
         
         SVProgressHUD.showSuccess(withStatus: "投稿しました")
         
